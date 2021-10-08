@@ -30,4 +30,7 @@ export class UsuarioCreateComponent implements OnInit {
       }
     );
   }
+  cancel(): void {
+    this.router.navigate(["usuarios"]);
+  }
 }
