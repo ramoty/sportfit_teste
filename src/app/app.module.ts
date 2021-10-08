@@ -15,7 +15,6 @@ import { HeaderComponent } from "./components/template/header/header.component";
 import { NavComponent } from "./components/template/nav/nav.component";
 import { HomeComponent } from "./components/views/home/home.component";
 import { UsuarioReadComponent } from "./components/views/usuario/usuario-read/usuario-read.component";
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +35,7 @@ import { UsuarioReadComponent } from "./components/views/usuario/usuario-read/us
     MatCardModule,
     MatTableModule,
     HttpClientModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -9,7 +9,7 @@ import { UsuarioService } from "../usuario.service";
 })
 export class UsuarioReadComponent implements OnInit {
   usuarios: Usuario[] = [];
-  displayedColumns: string[] = ["id", "nome", "descricao", "acoes"];
+  displayedColumns: string[] = ["id", "nome", "descricao", "livros", "acoes"];
   constructor(private service: UsuarioService) {}
 
   ngOnInit(): void {
@@ -18,7 +18,7 @@ export class UsuarioReadComponent implements OnInit {
 
   findAll() {
     this.service.findAll().subscribe((resposta) => {
-    console.log(resposta);
+      console.log(resposta);
       this.usuarios = resposta;
     });
   }

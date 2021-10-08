@@ -12,6 +12,26 @@
   color: #a09797;
   font-weight: 500;
 }
+
+button {
+  margin-bottom: 1rem;
+}
+
 .table {
   width: 100%;
+}
+
+.livros {
+  margin-left: 0.3rem;
+  color: #1cb5c9;
+}
+.edit {
+  color: #c2c51e;
+}
+.delete {
+  color: #c05353;
+  margin-left: 0.5rem;
+}
+.mat-header {
+  width: 5rem;
 }
