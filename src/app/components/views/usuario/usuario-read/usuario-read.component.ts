@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { Usuario } from "../usuario.model";
 import { UsuarioService } from "../usuario.service";
 
@@ -10,7 +11,7 @@ import { UsuarioService } from "../usuario.service";
 export class UsuarioReadComponent implements OnInit {
   usuarios: Usuario[] = [];
   displayedColumns: string[] = ["id", "nome", "descricao", "livros", "acoes"];
-  constructor(private service: UsuarioService) {}
+  constructor(private service: UsuarioService, private router: Router) {}
 
   ngOnInit(): void {
     this.findAll();
@@ -21,5 +22,9 @@ export class UsuarioReadComponent implements OnInit {
       console.log(resposta);
       this.usuarios = resposta;
     });
+  }
+
+  navegarParaUsuarioCreate() {
+    this.router.navigate(["usuarios/create"]);
   }
 }

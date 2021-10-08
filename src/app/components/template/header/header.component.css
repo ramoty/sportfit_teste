@@ -6,6 +6,7 @@ img {
   justify-content: center;
   height: 10%;
   background-color: #f5eeee;
+  color: black
 }
 span {
   display: flex;

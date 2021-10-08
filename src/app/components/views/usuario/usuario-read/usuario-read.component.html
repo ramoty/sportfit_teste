@@ -3,7 +3,8 @@
         <h1>Usuario</h1>
     </div>
 
-    <button class="mat-elevation-z8" mat-stroked-button color="primary">Novo Usuário</button>
+    <button class="mat-elevation-z8" (click)="navegarParaUsuarioCreate()" mat-stroked-button color="primary">NOVO
+        USUÁRIO</button>
 
     <div class="mat-elevation-z8 content-table">
         <table class="table" mat-table [dataSource]="usuarios">
