@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { Livro } from "../livro.model";
 import { LivroService } from "../livro.service";
 
@@ -14,10 +14,14 @@ export class LivroReadAllComponent implements OnInit {
   id_usu: string = "";
   livros: Livro[] = [];
 
-  constructor(private service: LivroService, private route: ActivatedRoute) {}
+  constructor(
+    private service: LivroService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.id_usu = this.route.snapshot.paramMap.get("id")!;
+    this.id_usu = this.route.snapshot.paramMap.get("id_usu")!;
     this.findAll();
   }
 
@@ -25,5 +29,9 @@ export class LivroReadAllComponent implements OnInit {
     this.service.findAllByUsuario(this.id_usu).subscribe((resposta) => {
       this.livros = resposta;
     });
+  }
+
+  navegarParaLivroCreate(): void {
+    this.router.navigate([`usuarios/${this.id_usu}/livros/create`]);
   }
 }

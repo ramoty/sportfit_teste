@@ -1,6 +1,6 @@
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatCardModule } from "@angular/material/card";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule } from "@angular/material/icon";
@@ -18,11 +18,14 @@ import { FooterComponent } from "./components/template/footer/footer.component";
 import { HeaderComponent } from "./components/template/header/header.component";
 import { NavComponent } from "./components/template/nav/nav.component";
 import { HomeComponent } from "./components/views/home/home.component";
+import { LivroReadAllComponent } from "./components/views/livro/livro-read-all/livro-read-all.component";
 import { UsuarioCreateComponent } from "./components/views/usuario/usuario-create/usuario-create.component";
+import { UsuarioDeleteComponent } from "./components/views/usuario/usuario-delete/usuario-delete.component";
 import { UsuarioReadComponent } from "./components/views/usuario/usuario-read/usuario-read.component";
-import { UsuarioDeleteComponent } from './components/views/usuario/usuario-delete/usuario-delete.component';
-import { UsuarioUpdateComponent } from './components/views/usuario/usuario-update/usuario-update.component';
-import { LivroReadAllComponent } from './components/views/livro/livro-read-all/livro-read-all.component';
+import { UsuarioUpdateComponent } from "./components/views/usuario/usuario-update/usuario-update.component";
+import { LivroCreateComponent } from './components/views/livro/livro-create/livro-create.component';
+import { LivroUpdateComponent } from './components/views/livro/livro-update/livro-update.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +38,8 @@ import { LivroReadAllComponent } from './components/views/livro/livro-read-all/l
     UsuarioDeleteComponent,
     UsuarioUpdateComponent,
     LivroReadAllComponent,
+    LivroCreateComponent,
+    LivroUpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +57,7 @@ import { LivroReadAllComponent } from './components/views/livro/livro-read-all/l
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

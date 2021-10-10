@@ -40,8 +40,7 @@ export class UsuarioUpdateComponent implements OnInit {
       },
       (err) => {
         this.service.mensagem(
-          "Validar se todos os campos estão preenchidos corretamente!"
-        );
+          "Validar se todos os campos estão preenchidos corretamente!"        );
         console.log(err);
       }
     );
