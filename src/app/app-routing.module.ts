@@ -1,3 +1,4 @@
+import { LivroReadComponent } from './components/views/livro/livro-read/livro-read.component';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { HomeComponent } from "./components/views/home/home.component";
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: "usuarios/:id_usu/livros/:id/delete",
     component: LivroDeleteComponent,
+  },
+  {
+    path: "usuarios/:id_usu/livros/:id/read",
+    component: LivroReadComponent,
   },
 ];
 
