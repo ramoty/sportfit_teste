@@ -8,7 +8,7 @@ import { Usuario } from "./usuario.model";
   providedIn: "root",
 })
 export class UsuarioService {
-  baseUrl: String = environment.baseUrl;
+  baseUrl: string = environment.baseUrl;
 
   constructor(private http: HttpClient, private _snack: MatSnackBar) {}
 
@@ -17,12 +17,22 @@ export class UsuarioService {
     return this.http.get<Usuario[]>(url);
   }
 
+  findById(id: string): Observable<Usuario> {
+    const url = `${this.baseUrl}/usuarios/${id}`;
+    return this.http.get<Usuario>(url);
+  }
+
   create(usuario: Usuario): Observable<Usuario> {
     const url = `${this.baseUrl}/usuarios`;
     return this.http.post<Usuario>(url, usuario);
   }
 
-  mensagem(str: String): void {
+  delete(id: string): Observable<void> {
+    const url = `${this.baseUrl}/usuarios/${id}`;
+    return this.http.delete<void>(url);
+  }
+
+  mensagem(str: string): void {
     this._snack.open(`${str}`, "OK", {
       horizontalPosition: "end",
       verticalPosition: "top",

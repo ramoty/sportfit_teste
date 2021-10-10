@@ -1,0 +1,22 @@
+<form>
+    <h1>DELETANDO USUÁRIO</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="usuario.nome" type="text" name="nome" disabled>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput [(ngModel)]="usuario.descricao" type="text" name="descricao" type="text" name="descricao"
+            disabled></textarea>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="delete()" class="mat-elevation-z8" mat-stroked-button
+            color="custom-app-primary">DELETAR</button>
+        <button (click)="cancel()" class="mat-" class="mat-elevation-z8" mat-stroked-button
+            color="custom-app-warn">CANCELAR</button>
+    </div>
+
+</form>

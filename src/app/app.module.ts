@@ -20,6 +20,7 @@ import { NavComponent } from "./components/template/nav/nav.component";
 import { HomeComponent } from "./components/views/home/home.component";
 import { UsuarioCreateComponent } from "./components/views/usuario/usuario-create/usuario-create.component";
 import { UsuarioReadComponent } from "./components/views/usuario/usuario-read/usuario-read.component";
+import { UsuarioDeleteComponent } from './components/views/usuario/usuario-delete/usuario-delete.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { UsuarioReadComponent } from "./components/views/usuario/usuario-read/us
     HomeComponent,
     UsuarioReadComponent,
     UsuarioCreateComponent,
+    UsuarioDeleteComponent,
   ],
   imports: [
     BrowserModule,

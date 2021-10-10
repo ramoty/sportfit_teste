@@ -19,7 +19,6 @@ export class UsuarioReadComponent implements OnInit {
 
   findAll() {
     this.service.findAll().subscribe((resposta) => {
-      console.log(resposta);
       this.usuarios = resposta;
     });
   }
