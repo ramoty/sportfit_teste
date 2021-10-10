@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { HomeComponent } from "./components/views/home/home.component";
 import { LivroCreateComponent } from "./components/views/livro/livro-create/livro-create.component";
+import { LivroDeleteComponent } from "./components/views/livro/livro-delete/livro-delete.component";
 import { LivroReadAllComponent } from "./components/views/livro/livro-read-all/livro-read-all.component";
 import { LivroUpdateComponent } from "./components/views/livro/livro-update/livro-update.component";
 import { UsuarioCreateComponent } from "./components/views/usuario/usuario-create/usuario-create.component";
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: "usuarios/:id_usu/livros/:id/update",
     component: LivroUpdateComponent,
+  },
+  {
+    path: "usuarios/:id_usu/livros/:id/delete",
+    component: LivroDeleteComponent,
   },
 ];
 
