@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  baseUrl: "https://sportfit-app.herokuapp.com",
+  baseUrl: "https://sportfit-app.herokuapp.com/",
+  headers: {
+    
+  }
 };
 
 /*

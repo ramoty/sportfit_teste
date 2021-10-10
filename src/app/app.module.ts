@@ -21,6 +21,8 @@ import { HomeComponent } from "./components/views/home/home.component";
 import { UsuarioCreateComponent } from "./components/views/usuario/usuario-create/usuario-create.component";
 import { UsuarioReadComponent } from "./components/views/usuario/usuario-read/usuario-read.component";
 import { UsuarioDeleteComponent } from './components/views/usuario/usuario-delete/usuario-delete.component';
+import { UsuarioUpdateComponent } from './components/views/usuario/usuario-update/usuario-update.component';
+import { LivroReadAllComponent } from './components/views/livro/livro-read-all/livro-read-all.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,8 @@ import { UsuarioDeleteComponent } from './components/views/usuario/usuario-delet
     UsuarioReadComponent,
     UsuarioCreateComponent,
     UsuarioDeleteComponent,
+    UsuarioUpdateComponent,
+    LivroReadAllComponent,
   ],
   imports: [
     BrowserModule,
